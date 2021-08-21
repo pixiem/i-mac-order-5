@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>E-Commerce Purchase</title>
+</head>
+
+<body>
+    <div class="mainDiv">
+        <div>
+            <img class="mainDivImg" src="images/mac.png" alt="">
+        </div>
+        <div class="main-Right">
+            <h1>Customize your Blue24-inch <br> iMac with apple A1 chip</h1>
+            <p>iMac is a family of all-in-one Macintosh desktop <br> computers designed and built by Apple Inc. It has <br>been the primary part of Apple's consumer desktop <br> offerings since its debut in August 1998, and has <br> evolved through seven distinct forms. </p>
+
+            <h3>Memory</h3>
+            <div class="all-button">
+                <button onclick="quantity(8)" id="8-gbmemory" class="select-button">8GB Unified memory</button>
+                <button onclick="quantity(16)" id="16-gbmemory" class="select-button">16GB Unified memory</button>
+            </div>
+            <h3>Storage</h3>
+            <div class="all-button">
+                <button onclick="quantity(256)" id="256gb-storage" class="select-button">256GB SSD
+                    Storage</button>
+                <button onclick="quantity(512)" id="512gb-storage" class="select-button">512GB SSD
+                    Storage</button>
+                <button onclick="quantity('tb')" id="1tb-storage" class="select-button">1TB SSD Storage</button>
+            </div>
+            <h3>Choose your delivery option</h3>
+            <div class="all-button">
+                <button onclick="quantity('free')" class="select-button">Friday, Aug 25 FREE Prime Delivery</button>
+                <button onclick="quantity('paid')" class="select-button">Friday, Aug 21 Delivery Charge $20</button>
+            </div>
+            <div class="price-list">
+                <div class="price-list-item">
+                    <h3>Best Price</h3>
+                    <h3>$ <span id="bestPrice">1299</span> </h3>
+                </div>
+                <hr>
+                <div class="price-list-item">
+                    <h3>Extra Memory Cost</h3>
+                    <h3>$ <span id="totalMemory">0</span> </h3>
+                </div>
+                <hr>
+                <div class="price-list-item">
+                    <h3>Extra Storage Cost</h3>
+                    <h3>$ <span id="totalStorage">0</span> </h3>
+                </div>
+                <hr>
+                <div class="price-list-item">
+                    <h3>Delivery Charge</h3>
+                    <h3>$ <span id="delivery" >0</span> </h3>
+                </div>
+                <hr class="line">
+                <div class="price-list-item">
+                    <h3>Total Price</h3>
+                    <h3>$ <span id="total-cost"></span> </h3>
+                </div>
+                <hr>
+            </div>
+            <div class="promo-section">
+                <h2>Add Promo Code</h2>
+                <div class="promo-apply">
+                    <input id="promo" type="text">
+                    <button id="apply">Apply</button>
+                </div>
+                <h3>Apply <span class="code">stevekaku</span> to get 20% Discount</h3>
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <h1>
+        <center>Total: $ <span id="final">1299</span> </center>
+    </h1>
+
+    <script src="js/calculation.js"></script>
+</body>
+
+</html>
