@@ -54,13 +54,18 @@ function totalPrice() {
 document.getElementById("apply").addEventListener('click', function () {
     const promoCode = document.getElementById('promo').value;
     if (promoCode == "stevekaku") {
-        const totalMoney = document.getElementById('total-cost').innerText;
-        var discount = totalMoney * 0.2;
-        const BeforePromo = document.getElementById('final').innerText;
-        const beforePromoNumber = parseInt(BeforePromo);
-        ;
-        document.getElementById('final').innerText = beforePromoNumber - discount;
-        document.getElementById('promo').value = "";
+        let promoValidation = document.getElementById('apply').innerText;
+        if (promoValidation == "Apply") {
+            const totalMoney = document.getElementById('total-cost').innerText;
+            var discount = totalMoney * 0.2;
+            const BeforePromo = document.getElementById('final').innerText;
+            const beforePromoNumber = parseInt(BeforePromo);
+            ;
+            document.getElementById('final').innerText = beforePromoNumber - discount;
+            document.getElementById('promo').value = "";
+            document.getElementById('apply').innerText = "Applied";
+        }
+        else document.getElementById('promo').value = "Promocode Alredy taken";
     }
     else alert("Invalid Promo Code")
 })
